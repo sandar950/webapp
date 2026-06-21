@@ -1,0 +1,21 @@
+{
+  "name": "Thai 2D3D Lottery",
+  "short_name": "Thai 2D3D",
+  "description": "Thai 2D3D Lottery Application",
+  "start_url": "index.php",
+  "display": "standalone",
+  "background_color": "#f3f4f6",
+  "theme_color": "#1a428a",
+  "icons": [
+    {
+      "src": "https://via.placeholder.com/192/1a428a/FFFFFF?text=2D3D",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://via.placeholder.com/512/1a428a/FFFFFF?text=2D3D",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

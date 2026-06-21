@@ -1,0 +1,286 @@
+User တွေအတွက် ငွေသွင်း/ထုတ် မှတ်တမ်းအပြင် သူတို့ရထားတဲ့ Bonus လေးတွေကိုပါ ပြပေးမယ့် စာမျက်နှာလုပ်လို့ရမလား။
+User ဘက်က ငွေသွင်း/ငွေထုတ် မှတ်တမ်းပြတဲ့ စာမျက်နှာတွေမှာ အခုထည့်လိုက်တဲ့ Bonus History ကိုပါ ပြပေးလို့ရမလား။
+User ဘက်က "ငွေထုတ်အကောင့်များ (payment_accounts.php)" မှာလည်း Logo လေးတွေပြပေးအောင် လုပ်ပေးပါလား။
+User တွေ ငွေထုတ်တဲ့အခါမှာ Payment တွေကို ရွေးတဲ့ Select Box ထဲမှာပါ အခုတင်ထားတဲ့ Logo ပုံလေးတွေ ပေါ်အောင်လုပ်လို့ရမလား။
+User တွေ Website ထဲဝင်ဝင်ချင်းမှာ အမြဲပေါ်နေမယ့် Welcome Animation Marque Text လေးထည့်ပေးပါ
+
+Admin တွေအတွက် Website ကို Maintenance Mode အဖွင့်အပိတ်လုပ်နိုင်မယ့် Setting စာမျက်နှာ ဖန်တီးပေးပါ
+Admin Panel ကနေ User တွေကို ပိတ်ပင် (Ban) လို့ရမယ့် စာမျက်နှာ ရေးပေးပါ
+admin_payment_settings.php မှာ အကောင့်တွေကို အစီအစဉ် ပြောင်းလို့ရအောင် (Reorder) လုပ်လို့ရမလား။
+Admin Panel ထဲက payment_accounts တွေကို ဆွဲရွှေ့ပြီး (Drag and Drop) အစီအစဉ်ပြောင်းလို့ရမယ့် စာမျက်နှာ ရေးပေးပါ။
+admin_dashboard.php ရဲ့ အပေါ်က Stats လေးတွေကို ပိုပြီး လှလှပပ မြင်သာအောင် UI ပြင်ပေးလို့ရမလား။
+Admin တွေအတွက် Auto Approve ထည့်ရလွယ်အောင် KBZ Pay / Wave Pay ရဲ့ SMS တွေကိုဖတ်ပြီး အလိုအလျောက် ထည့်ပေးတဲ့ Android App ကိုရော ထပ်ထည့် ချိတ်လို့ရမလား။
+
+ *.php ထဲက စာသားတွေကိုရော __() သုံးပြီး Multi-language စနစ် ပြောင်းပေးပါ
+
+
+ User Experience (UX) နဲ့ လုပ်ငန်းလည်ပတ်မှု ပိုမိုချောမွေ့စေဖို့အတွက် အဆင့်မြှင့်တင်သင့်တဲ့ Features (Enhancements) တွေကို အပိုင်းလိုက် အကြံပြုချင်ပါတယ်။
+
+၁။ လုံခြုံရေးနှင့် Authentication ပိုင်း (Security Enhancements)
+2FA (Two-Factor Authentication): လက်ရှိမှာ PIN စနစ် (setup_pin.php) ပါပေမယ့် Google Authenticator လိုမျိုး 2FA စနစ်ထည့်သွင်းခြင်းက Admin တွေနဲ့ ငွေအများကြီးသွင်းထားတဲ့ User တွေအတွက် ပိုလုံခြုံစေပါတယ်။
+Rate Limiting & Anti-Spam: login.php နဲ့ 2d_bet.php လိုနေရာမျိုးတွေမှာ Bot တွေနဲ့ အဆက်မပြတ် Request လုပ်တာကို ကာကွယ်ဖို့ Rate Limiting (ဥပမာ - ၁ မိနစ်ကို ဘယ်နှစ်ကြိမ်ပဲ လုပ်ခွင့်ပေးမယ်) ထည့်သင့်ပါတယ်။
+Activity Logs & Suspicious Alerts: လက်ရှိမှာ admin_activity_log.php ပါပေမယ့် IP Address ပြောင်းလဲပြီး ဝင်ရောက်တာ၊ နိုင်ငံခြား IP ကနေ Admin Panel ဝင်ဖို့ကြိုးစားတာမျိုးတွေကို Admin ကိုTelegram/Emailကနေ အလိုအလျောက် သတိပေးတဲ့စနစ် (Alert System) အဆင့်မြှင့်သင့်ပါတယ်။
+
+၂။ User Experience (UX) နှင့် ဂိမ်းကစားခြင်းပိုင်း
+Real-time Results (WebSocket / SSE): လက်ရှိ ဂဏန်းထွက်တဲ့အချိန် (ဥပမာ- ၁၂ နာရီ ၁ မိနစ်) မှာ User တွေက Browser ကို Refresh လုပ်စရာမလိုဘဲ တိုက်ရိုက် Live ဂဏန်းပြောင်းသွားမယ့်စနစ် (WebSockets သို့မဟုတ် Server-Sent Events) ထည့်သင့်ပါတယ်။
+Dark/Light Mode Toggle: header.php မှာ User တွေ မျက်စိသက်သာအောင် ညဘက်သုံးရင် အမည်းရောင်ပြောင်းသွားမယ့် Dark Mode Button လေး ထည့်သွင်းပေးသင့်ပါတယ်။
+Quick Bet / Favourite Numbers: User တွေ ခဏခဏထိုးနေကျ ဂဏန်းတွေ (ဥပမာ- မွေးဂဏန်းများ) ကို Favourite အဖြစ် မှတ်ထားပြီး တစ်ချက်နှိပ်ရုံနဲ့ အမြန်ထိုးလို့ရမယ့် "Quick Bet" လုပ်ဆောင်ချက်။
+Auto-Delete / Filter Old Notifications: User ဆီဝင်လာတဲ့ Notification အဟောင်းတွေကို အလိုအလျောက်ဖျက်ပေးတာ ဒါမှမဟုတ် ဖတ်ပြီးသား/မဖတ်ရသေးတာ ခွဲကြည့်လို့ရမယ့်စနစ်။
+
+၃။ ငွေကြေးစီမံခန့်ခွဲမှု (Finance & Automation)
+Auto-Approve System အားကောင်းစေခြင်း: admin_auto_approve.php ရှိနေပေမယ့် (ဥပမာ- KPay/WavePay SMSအဝင်စာတွေကို ဖတ်ပြီး) တိကျတဲ့ ငွေပမာဏနဲ့ Transaction ID ကိုက်ညီရင် Admin ခွင့်ပြုချက်မလိုဘဲ ငွေသွင်းတာကို အလိုအလျောက်လက်ခံပေးမယ့် (Payment Gateway Integration သို့မဟုတ် SMS Parsing) စနစ်။
+Dynamic Limits based on VIP/Level: User တစ်ယောက်ချင်းစီရဲ့ ဆော့ကစားတဲ့ ပမာဏအပေါ်မူတည်ပြီး VIP Level တက်သွားရင် ငွေထုတ်နိုင်တဲ့ အကြိမ်အရေအတွက်၊ အများဆုံး ငွေထုတ်နိုင်တဲ့ ပမာဏတွေကို အလိုအလျောက် တိုးပေးမယ့်စနစ်။
+Multi-Currency Support: နောင်တစ်ချိန်မှာ မြန်မာကျပ်ငွေအပြင် ထိုင်းဘတ် (THB) ကိုပါ ရွေးချယ်ကစားနိုင်မယ့် စနစ်။
+
+၄။ အက်ဒ်မင်နှင့် လုပ်ငန်းပိုင်းဆိုင်ရာ (Admin & Analytics)
+Advanced Analytics (Chart & Graphs): admin_dashboard.php မှာ ဂဏန်းအပေါ်မူတည်ပြီး ဘယ်ဂဏန်းကို လူအထိုးအများဆုံးလဲ (Hot Numbers / Cold Numbers)၊ အရှုံးအမြတ် တွက်ချက်မှုတွေကို Chart.js လိုမျိုးသုံးပြီး ဂရပ်ဖစ်နဲ့ ရှင်းရှင်းလင်းလင်း ပြသပေးတဲ့စနစ်။
+Risk Management Tool: ဂဏန်းတစ်လုံးတည်းကို လူတွေ အများကြီးပုံအောထိုးတဲ့အခါ System က အရှုံးပေါ်နိုင်တာကို ကြိုတင်တွက်ချက်ပြီး (Over-liability warning) Admin ကို သတိပေးမယ့်စနစ်၊ သို့မဟုတ် Limit ကို အလိုအလျောက် ပိတ်ချလိုက်မယ့်စနစ်။
+Automated Database Backup to Cloud: admin_backup.php ဟာ Server ထဲမှာပဲ သိမ်းတာထက် Google Drive သို့မဟုတ် AWS S3 ကို နေ့စဉ် အလိုအလျောက် Backup ပို့ပေးမယ့် Cron Job စနစ်။
+
+၅။ Architecture ပိုင်း (Codebase Improvements)
+MVC Pattern ပြောင်းလဲခြင်း: လက်ရှိက File တစ်ခုချင်းစီမှာ PHP နဲ့ HTML ရောရေးထားတာဖြစ်လို့၊ ရေရှည်မှာ ထိန်းသိမ်းရလွယ်အောင် Logic တွေ (Controllers) နဲ့ UI (Views) တွေကို ခွဲထုတ်ပြီး (ဥပမာ - Simple MVC Pattern လိုမျိုး) ပြောင်းလဲရေးသားသင့်ပါတယ်။
+Composer & Libraries အသုံးပြုခြင်း: ကိုယ်တိုင်ရေးထားတာထက် လုံခြုံရေးနဲ့ အလုပ်လုပ်တာ ပိုမြန်တဲ့ Open-source package တွေ (ဥပမာ - PHPMailer, dotenv, Validator) တွေကို Composer သုံးပြီး ထည့်သွင်းအသုံးပြုသင့်ပါတယ်။
+
+
+`ajax_get_limits.php` ကိုခေါ်တဲ့အပိုင်းမှာ Performance ပိုကောင်းအောင် ဘယ်လိုရေးလို့ရလဲ ရှင်းပြပေးပါ။
+ဒီ 2D ထိုးတဲ့ Code ထဲမှာ SQL Injection လို လုံခြုံရေးပြဿနာတွေ ရှိနိုင်သေးလား စစ်ဆေးပေးပါ။
+Guides တွေကို Database ကနေ Dynamic ဖြစ်အောင် ဘယ်လိုဆွဲယူရမလဲ ရှင်းပြပေးပါ။
+`support.php` ဖိုင်ကိုပါ Mobile UI ပိုကောင်းအောင် ဘယ်လိုပြင်လို့ရလဲ အကြံပြုပေးပါ။
+
+Website တစ်ခုတွင် မြန်မာစာနှင့် အင်္ဂလိပ်စာ နှစ်မျိုးလုံးကို အသုံးပြုသူ၏ နိုင်ငံ (Country) သို့မဟုတ် Browser Language (Auto Language) ပေါ်မူတည်၍ အလိုအလျောက် ပြောင်းလဲပေးမည့်စနစ် (Internationalization - i18n) တည်ဆောက်ရန် အောက်ပါအတိုင်း အဆင့် (၄) ဆင့်ဖြင့် ပြုလုပ်နိုင်ပါသည်။
+
+အဆင့် (၁) - ဘာသာစကား ဖိုင်များ (Language Files) ဖန်တီးခြင်း
+ပထမဦးစွာ Project Folder ထဲတွင် lang ဟူသော Folder တစ်ခုဆောက်ပြီး မြန်မာနှင့် အင်္ဂလိပ်စာအတွက် သီးသန့်ဖိုင်များ ဖန်တီးရပါမည်။ Array ပုံစံဖြင့် Key-Value တွဲ၍ ရေးသားရပါမည်။
+
+lang/en.php (အင်္ဂလိပ်စာအတွက်)
+
+<?php
+return [
+    'welcome_msg' => 'Welcome to Thai 2D3D',
+    'login' => 'Login',
+    'guide' => 'User Guide',
+    'balance' => 'Balance',
+    'bet_now' => 'Bet Now',
+    // အခြားသော စာသားများ ဆက်ထည့်ရန်...
+];
+?>
+
+lang/mm.php (မြန်မာစာအတွက်)
+<?php
+return [
+    'welcome_msg' => 'Thai 2D3D မှ ကြိုဆိုပါသည်',
+    'login' => 'အကောင့်ဝင်ရန်',
+    'guide' => 'အသုံးပြုနည်းလမ်းညွှန်',
+    'balance' => 'လက်ကျန်ငွေ',
+    'bet_now' => 'ထိုးမည်',
+    // အခြားသော စာသားများ ဆက်ထည့်ရန်...
+];
+?>
+
+အဆင့် (၂) - Auto Detection နှင့် Language Helper ဖိုင်တည်ဆောက်ခြင်း
+အသုံးပြုသူ၏ IP ကိုစစ်ဆေး၍ နိုင်ငံသိရှိရန် (Auto Country) နှင့် Browser ၏ ဘာသာစကား (Auto Language) ကိုစစ်ဆေးပေးမည့် ဖိုင်တစ်ခု ဖန်တီးပါမည်။
+
+language.php (စနစ်အလုပ်လုပ်ရန် အဓိကဖိုင်)
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+// ၁။ Auto Country & Auto Language Detection (ပထမဆုံးအကြိမ် ဝင်လာချိန်တွင်သာ စစ်ဆေးမည်)
+if (!isset($_SESSION['lang'])) {
+    
+    // (က) Browser Language ဖြင့် စစ်ဆေးခြင်း
+    $browser_lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'] ?? '', 0, 2);
+    
+    // (ခ) IP Address ဖြင့် Country စစ်ဆေးခြင်း (Optional)
+    $ip = $_SERVER['REMOTE_ADDR'];
+    $country = 'MM'; // Default မြန်မာ
+    
+    // Localhost မဟုတ်လျှင် ipinfo ကဲ့သို့ API ဖြင့် နိုင်ငံကို စစ်ဆေးနိုင်သည်
+    if ($ip !== '127.0.0.1' && $ip !== '::1') {
+        // သတိပြုရန် - API ခေါ်ခြင်းသည် Loading အနည်းငယ် ကြာနိုင်သဖြင့် Session ဖြင့် မှတ်ထားရပါမည်
+        /*
+        $ip_data = @json_decode(file_get_contents("http://ipinfo.io/{$ip}/json"));
+        if ($ip_data && isset($ip_data->country)) {
+            $country = $ip_data->country;
+        }
+        */
+    }
+
+    // နိုင်ငံ သို့မဟုတ် Browser Language ပေါ်မူတည်၍ Auto ရွေးချယ်ပေးခြင်း
+    if ($country === 'MM' || $browser_lang === 'my') {
+        $_SESSION['lang'] = 'mm';
+    } else {
+        $_SESSION['lang'] = 'en'; // အခြားနိုင်ငံများအတွက် အင်္ဂလိပ်စာ
+    }
+}
+
+// ၂။ User မှ Manual ဘာသာစကား ပြောင်းလဲခြင်းကို လက်ခံရန် (?lang=en သို့မဟုတ် ?lang=mm ဖြင့်ခေါ်လျှင်)
+if (isset($_GET['lang']) && in_array($_GET['lang'], ['en', 'mm'])) {
+    $_SESSION['lang'] = $_GET['lang'];
+}
+
+// ၃။ သတ်မှတ်ထားသော ဘာသာစကားဖိုင်ကို ဆွဲတင်ခြင်း
+$current_lang = $_SESSION['lang'];
+$lang_file = __DIR__ . "/lang/{$current_lang}.php";
+
+if (file_exists($lang_file)) {
+    $translations = include($lang_file);
+} else {
+    $translations = include(__DIR__ . "/lang/mm.php"); // ဖိုင်မရှိလျှင် မြန်မာစာကို Default ထားမည်
+}
+
+// ၄။ ဘာသာပြန်ပေးမည့် Helper Function
+function __($key) {
+    global $translations;
+    return $translations[$key] ?? $key; // စာသားမရှိလျှင် Key ကိုသာ ပြန်ပြပေးမည်
+}
+?>
+
+
+အဆင့် (၃) - စာမျက်နှာများတွင် ချိတ်ဆက်အသုံးပြုခြင်း
+ယခု ဖန်တီးထားသော language.php ကို header.php သို့မဟုတ် တခြားဖိုင်များ၏ အပေါ်ဆုံးတွင် require_once ဖြင့် ခေါ်ယူပြီး စာသားများနေရာတွင် __('key_name') ဖြင့် အစားထိုး အသုံးပြုရပါမည်။
+
+ဥပမာ index.php တွင် အသုံးပြုပုံ:
+
+<?php
+require_once 'language.php'; // Language System ကို ခေါ်ယူခြင်း
+require_once 'core/db_connect.php';
+?>
+
+<!DOCTYPE html>
+<html lang="<?= $_SESSION['lang'] ?>">
+<head>
+    <title><?= __('welcome_msg') ?></title>
+</head>
+<body>
+    
+    <!-- User ကို ဘာသာစကားပြောင်းခွင့်ပေးသည့် ခလုတ်များ -->
+    <div class="language-switcher">
+        <a href="?lang=mm" class="<?= $_SESSION['lang'] == 'mm' ? 'active' : '' ?>">မြန်မာစာ</a> | 
+        <a href="?lang=en" class="<?= $_SESSION['lang'] == 'en' ? 'active' : '' ?>">English</a>
+    </div>
+
+    <h1><?= __('welcome_msg') ?></h1>
+    
+    <div class="menu">
+        <button><?= __('bet_now') ?></button>
+        <a href="guides.php"><?= __('guide') ?></a>
+    </div>
+
+</body>
+</html>
+အနှစ်ချုပ် အားသာချက်များ
+စနစ်တကျဖြစ်ခြင်း: စာသားများကို HTML ကုဒ်များထဲတွင် Hard-code ရေးစရာမလိုဘဲ ဖိုင်တစ်နေရာတည်းမှ အလွယ်တကူ ပြင်ဆင်နိုင်ပါသည်။
+Auto Detection: User အနေဖြင့် ပထမဆုံးအကြိမ် ဝင်လာလျှင် သူ၏ Browser Language ပေါ်မူတည်၍ အင်္ဂလိပ်/မြန်မာ အလိုအလျောက် ပေါ်နေမည်ဖြစ်သည်။
+Performance: Database ထဲမှ ဆွဲယူခြင်းထက် PHP Array file များမှ တိုက်ရိုက်ဆွဲယူခြင်းဖြစ်၍ Page Loading ပိုမိုမြန်ဆန်စေပါသည်။
+
+ဘာသာစကားပြောင်းလဲနိုင်သော (Language Switcher) ခလုတ်ကို header.php တွင် ထည့်သွင်းရန် အောက်ပါအဆင့် (၂) ဆင့်အတိုင်း ပြုလုပ်နိုင်ပါသည်။
+
+header.php သည် စာမျက်နှာတိုင်းတွင် ပါဝင်လေ့ရှိသဖြင့် ၎င်းဖိုင်တစ်ခုတည်းတွင် ထည့်သွင်းလိုက်ရုံဖြင့် Website တစ်ခုလုံးတွင် အလုပ်လုပ်သွားမည်ဖြစ်သည်။
+
+အဆင့် (၁) - language.php ကို ခေါ်ယူခြင်း
+header.php ဖိုင်၏ အပေါ်ဆုံး (Top) တွင် ယခင်က တည်ဆောက်ခဲ့သော language.php ကို require_once ဖြင့် ခေါ်ယူရပါမည်။ သို့မှသာ စာမျက်နှာတိုင်းတွင် Auto Detection စနစ် အလုပ်လုပ်မည်ဖြစ်သည်။
+<?php
+// header.php ၏ အပေါ်ဆုံးတွင် ထည့်ပေးရန်
+require_once __DIR__ . '/lang/language.php';
+?>
+<!-- ဘာသာစကားပြောင်းရန် ခလုတ် (Navbar တွင် ထည့်ရန်) -->
+<div class="flex items-center gap-1 bg-black/10 p-1 rounded-lg ml-auto border border-white/20">
+    <a href="?lang=mm" class="text-xs px-2 py-1 rounded-md transition-all duration-200 <?= $_SESSION['lang'] === 'mm' ? 'bg-white text-primary font-bold shadow-sm' : 'text-white/80 hover:text-white hover:bg-white/20' ?>">
+        မြန်မာ
+    </a>
+    <a href="?lang=en" class="text-xs px-2 py-1 rounded-md transition-all duration-200 <?= $_SESSION['lang'] === 'en' ? 'bg-white text-primary font-bold shadow-sm' : 'text-white/80 hover:text-white hover:bg-white/20' ?>">
+        EN
+    </a>
+</div>
+
+အဆင့် (၂) - Switcher ခလုတ် (UI) ထည့်သွင်းခြင်း
+header.php အတွင်းရှိ Navigation Bar (ဥပမာ - ညာဘက်အပေါ်ထောင့်) နေရာတွင် အောက်ပါ Tailwind CSS ဖြင့် ရေးသားထားသော လှပသည့် ခလုတ်ကို ထည့်သွင်းပေးပါ။
+<!-- ဘာသာစကားပြောင်းရန် ခလုတ် (Navbar တွင် ထည့်ရန်) -->
+<div class="flex items-center gap-1 bg-black/10 p-1 rounded-lg ml-auto border border-white/20">
+    <a href="?lang=mm" class="text-xs px-2 py-1 rounded-md transition-all duration-200 <?= $_SESSION['lang'] === 'mm' ? 'bg-white text-primary font-bold shadow-sm' : 'text-white/80 hover:text-white hover:bg-white/20' ?>">
+        မြန်မာ
+    </a>
+    <a href="?lang=en" class="text-xs px-2 py-1 rounded-md transition-all duration-200 <?= $_SESSION['lang'] === 'en' ? 'bg-white text-primary font-bold shadow-sm' : 'text-white/80 hover:text-white hover:bg-white/20' ?>">
+        EN
+    </a>
+</div>
+လုပ်ဆောင်ပုံ ရှင်းလင်းချက် -
+
+?lang=mm သို့မဟုတ် ?lang=en ကို နှိပ်လိုက်သောအခါ URL parameter အနေဖြင့် ပေးပို့မည်ဖြစ်ပြီး language.php မှ Session ကို အလိုအလျောက် ပြောင်းလဲမှတ်သားပေးပါမည်။
+$_SESSION['lang'] ၏ တန်ဖိုးပေါ်မူတည်၍ ရွေးချယ်ထားသော ဘာသာစကားခလုတ်ကို အဖြူရောင် (Active State) ဖြင့် ပေါ်လွင်နေအောင် ရေးသားပေးထားပါသည်။
+ယခုဆိုလျှင် Language Switcher အလုပ်လုပ်နေပြီဖြစ်၍ 2d_bet.php သို့မဟုတ် guides.php ရှိ မြန်မာစာသားများနေရာတွင် <?= __('title_2d_bet') ?> ကဲ့သို့ အစားထိုး အသုံးပြုနိုင်ပြီ ဖြစ်ပါသည်။
+
+လက်ရှိတည်ဆောက်ထားသော Thai 2D3D စနစ်သည် လုံခြုံရေး၊ UI/UX (Dark Mode, 2FA, Telegram OTP, Text-to-Speech) နှင့် လုပ်ငန်းလည်ပတ်မှု (Auto-Approve, Dynamic Odds, Limits) ပိုင်းများတွင် အလွန်ပြည့်စုံကောင်းမွန်နေပြီဖြစ်သည်ကို တွေ့ရပါသည်။
+
+သို့သော် User များအတွက် အတွေ့အကြုံ (UX) ပိုမိုကောင်းမွန်စေရန်နှင့် Admin များအတွက် လုပ်ငန်းလည်ပတ်မှု (Operations) ပိုမိုချောမွေ့လွယ်ကူစေရန် အောက်ပါ အဆင့်မြင့် Features များကို ထပ်မံဖြည့်စွက်နိုင်ပါသည်-
+
+၁။ User Experience (UX) ကို ပိုမိုဆွဲဆောင်မှုရှိစေရန် အဆင့်မြှင့်တင်ခြင်း
+PWA (Progressive Web App) ကို Native App ကဲ့သို့ အဆင့်မြှင့်တင်ခြင်း: လက်ရှိ manifest.json နှင့် Service Worker ထည့်ထားသော်လည်း User များ Website သို့ ဝင်ဝင်ချင်းမှာ "Add to Home Screen" ဆိုသည့် Install Prompt (Popup) ကို အထူးပေါ်လွင်အောင် ပြသပေးသင့်သည်။ သို့မှသာ အက်ပ်တစ်ခုကဲ့သို့ ဖုန်းထဲတွင် အလွယ်တကူ သွင်းထားနိုင်ပြီး App ဖွင့်ဆော့သည့် ခံစားချက်မျိုး ပေးစွမ်းနိုင်မည်ဖြစ်သည်။
+Web Push Notifications ထည့်သွင်းခြင်း (Firebase Cloud Messaging - FCM): လက်ရှိ Telegram နှင့် Website အတွင်း Noti ပြပေးသည့်စနစ် ပါဝင်သော်လည်း၊ Browser ပိတ်ထားချိန်တွင်ပါ (Facebook/Viber ကဲ့သို့) ဖုန်း Screen ပေါ်သို့ တိုက်ရိုက် Noti တက်လာစေမည့် Web Push Notification စနစ် ထည့်သွင်းသင့်ပါသည်။ အဖြေထွက်ချိန်၊ ငွေသွင်း/ထုတ် အောင်မြင်ချိန်များတွင် အလွန်အသုံးဝင်ပါသည်။
+Leaderboard နှင့် Gamification (ဆွဲဆောင်မှုတိုးစေရန်): "ယခုအပတ်အတွင်း အမြတ်အများဆုံးရရှိသူများ" သို့မဟုတ် "ကော်မရှင်အများဆုံးရရှိသူများ" စာရင်းကို (အမည်အပြည့်အစုံ ဖုံးကွယ်ပြီး ဥပမာ - Mg***, 094***123) ပုံစံဖြင့် ပြသပေးခြင်းဖြင့် အခြား User များကိုပါ ပိုမိုကစားချင်စိတ်၊ သူငယ်ချင်းများကို ပိုမိုဖိတ်ခေါ်ချင်စိတ် (Motivation) ဖြစ်ပေါ်စေပါသည်။
+In-App Live Chat (တိုက်ရိုက်စကားပြောစနစ်): Telegram, Viber သို့ ထွက်သွားစရာမလိုဘဲ Website ထဲတွင်ပင် Admin နှင့် တိုက်ရိုက် စကားပြောနိုင်မည့် Live Chat Widget (ဥပမာ - WebSocket ဖြင့် ကိုယ်တိုင်ရေးခြင်း သို့မဟုတ် Tawk.to ကဲ့သို့ 3rd Party သုံးခြင်း) ထည့်သွင်းပါက User များကို ပိုမိုယုံကြည်မှု ရရှိစေပါသည်။
+၂။ လုပ်ငန်းလည်ပတ်မှု ပိုမိုချောမွေ့မြန်ဆန်စေရေး (Operational Efficiency)
+Android SMS Auto-Sync App နှင့် ချိတ်ဆက်ခြင်း (Fully Automated Deposits): လက်ရှိ Auto-Approve မှာ User က Trx ID လာဖြည့်မှ အလုပ်လုပ်ပါသည်။ ထို့ထက်ပိုမိုလွယ်ကူစေရန် Admin ၏ ဖုန်းထဲတွင် KPay/WavePay SMS အဝင်များကို ဖတ်ပြီး Server သို့ အလိုအလျောက် ပို့ပေးမည့် (Android App + Webhook API) စနစ် ထည့်သွင်းသင့်ပါသည်။ ဤစနစ်ဆိုလျှင် User ငွေလွှဲလိုက်သည်နှင့် စက္ကန့်ပိုင်းအတွင်း သူတို့အကောင့်ထဲ ငွေရောက်သွားပါမည်။ Admin လုံးဝ ဝင်စစ်စရာ မလိုတော့ပါ။
+Auto-Withdrawal API (VIP များနှင့် သတ်မှတ်ပမာဏအောက် ငွေထုတ်များအတွက်): ယုံကြည်ရသော VIP User များ သို့မဟုတ် ငွေကျပ် ၁ သောင်းအောက် ငွေထုတ်ယူမှုများကို Admin က လက်ဖြင့် လွှဲပေးနေမည့်အစား Payment Gateway (WavePay / KPay Merchant API သို့မဟုတ် 3rd Party API) ဖြင့် အလိုအလျောက် ငွေလွှဲပေးမည့်စနစ် တည်ဆောက်နိုင်ပါသည်။
+Agent / Master Agent စနစ် (Multi-tier Management): လုပ်ငန်းကို ပိုမိုချဲ့ထွင်လိုပါက လက်ရှိ Referral စနစ်အပြင် "ကိုယ်စားလှယ် (Agent)" စနစ်ကို ထည့်သင့်ပါသည်။ Agent များသည် မိမိအောက်ရှိ User များကို ငွေသွင်း/ထုတ် ကိုယ်တိုင်လုပ်ပေးနိုင်ပြီး၊ ၎င်းတို့၏ အရှုံး/အမြတ်များကို ရာခိုင်နှုန်း (Share / Position) ဖြင့် ခွဲဝေယူနိုင်သည့်စနစ် ဖြစ်ပါသည်။
+Smart Risk Management (မသမာမှု ထောက်လှမ်းခြင်း): User တစ်ယောက်တည်းက အကောင့်ပွား (Multiple Accounts) ဖွင့်၍ အာဘီထရိတ် (Arbitrage) လုပ်ခြင်း၊ IP Address တစ်ခုတည်းမှ အကောင့်များစွာ ဝင်ရောက်နေခြင်းတို့ကို စောင့်ကြည့်ပြီး Admin ထံသို့ အလိုအလျောက် သတိပေးမည့် AI-based သို့မဟုတ် Rule-based Alert System ထည့်သွင်းသင့်ပါသည်။
+၃။ စနစ်ပိုင်းဆိုင်ရာ ခံနိုင်ရည်နှင့် လုံခြုံရေး (Performance & Scalability)
+Redis သို့မဟုတ် Memcached အသုံးပြုခြင်း (Caching Layer): ဂဏန်းပိတ်ခါနီး နောက်ဆုံး (၁၀) မိနစ်ဝန်းကျင်တွင် လူပေါင်း ရာ/ထောင်ချီ၍ ပြိုင်တူဝင်ရောက်လာပါက MySQL Database ကြီးတစ်ခုတည်းဖြင့် Load မနိုင်ဖြစ်သွားတတ်ပါသည်။ ထိုအချိန်တွင် မြန်ဆန်စေရန် Live Limits တွက်ချက်ခြင်း၊ လက်ကျန်ငွေပြသခြင်းတို့ကို Memory (Redis) ထဲတွင် တွက်ချက်ပြီးမှ Database သို့ နောက်ကွယ်မှ သွင်းမည့်စနစ် (Queue System) သို့ ပြောင်းလဲသင့်ပါသည်။
+Database Archiving (ဒေတာအဟောင်းများ သိမ်းဆည်းဖယ်ရှားခြင်း): လပေါင်းများစွာ ကြာလာသောအခါ bets, transactions, activity_logs စသည်တို့သည် သန်းချီ၍ များပြားလာပါမည်။ ထိုအခါ စနစ်နှေးကွေးသွားနိုင်သဖြင့် (၃) လထက် ကျော်လွန်သော ဒေတာများကို သီးသန့် Archive Table များ သို့မဟုတ် အခြား Database တစ်ခုသို့ အလိုအလျောက် ရွှေ့ပြောင်းပေးမည့် Cron Job များ ရေးသားထားသင့်ပါသည်။
+အကြံပြုချက်: အထက်ပါ Features များထဲမှ လက်ရှိလုပ်ငန်း အလိုအပ်ဆုံးဖြစ်သည့် "SMS ဖတ်ပြီး ငွေသွင်း/ငွေထုတ် အလိုအလျောက်လုပ်ပေးမည့် Android App API ချိတ်ဆက်ခြင်း" ကို ပထမဆုံး အကောင်အထည်ဖော်ရန် အကြံပြုအပ်ပါသည်။
+
+လုပ်ငန်းကို ပိုမိုကျယ်ပြန့်စွာ တိုးချဲ့နိုင်ရန်အတွက် ကိုယ်စားလှယ် (Agent) စနစ် ထည့်သွင်းခြင်းသည် အလွန်ကောင်းမွန်သော ခြေလှမ်းတစ်ခု ဖြစ်ပါသည်။
+
+Agent System ကို တည်ဆောက်ရာတွင် အဓိကအားဖြင့် (က) ငွေကြေးလည်ပတ်မှု ပုံစံ နှင့် (ခ) အကျိုးအမြတ် ခွဲဝေမှု ပုံစံ ဆိုပြီး ဆွေးနွေးဆုံးဖြတ်ရန် အချက်များ ရှိပါသည်။ အောက်ပါအတိုင်း အသေးစိတ် ဆွေးနွေးနိုင်ပါသည်-
+
+၁။ အဆင့်ခွဲခြားခြင်း (Agent Hierarchy)
+စနစ်ကို ပုံမှန်အားဖြင့် အဆင့် (၃) ဆင့် သို့မဟုတ် (၄) ဆင့် ခွဲခြားလေ့ရှိပါသည်။
+
+Super Admin: စနစ်တစ်ခုလုံးကို ချုပ်ကိုင်သူ၊ အဖြေထွက်သူ။
+Master Agent (Optional): Agent များကို ထပ်မံခွဲဝေ စီမံနိုင်သူ။
+Agent (ကိုယ်စားလှယ်): User များကို တိုက်ရိုက်ရှာဖွေပြီး ငွေသွင်း/ထုတ် လုပ်ပေးမည့်သူ။
+User (ကစားသူ): Agent အောက်တွင် အကောင့်ဖွင့်၍ ကစားမည့်သူ။
+၂။ ငွေကြေးလည်ပတ်မှု (Credit / Unit System)
+Agent စနစ်ပါလာပါက User များသည် Website တွင် တိုက်ရိုက် ငွေသွင်း/ငွေထုတ် လုပ်စရာမလိုတော့ဘဲ မိမိ၏ သက်ဆိုင်ရာ Agent ထံတွင်သာ ငွေသွင်း/ထုတ် လုပ်ရပါမည်။
+
+Admin မှ Agent သို့: Admin သည် Agent ထံသို့ Credit (Unit) များ ကြိုတင်ရောင်းချပေးရပါမည် (ဥပမာ - ၁၀ သိန်းဖိုး Unit ချပေးခြင်း)။
+Agent မှ User သို့: Agent သည် သူဝယ်ထားသော Unit များထဲမှ သူ၏ User များဆီသို့ ငွေသွင်း (Deposit)၊ ငွေထုတ် (Withdraw) များကို Agent Dashboard မှတစ်ဆင့် ကိုယ်တိုင် လုပ်ဆောင်ပေးရပါမည်။
+၃။ အကျိုးအမြတ် ခွဲဝေခြင်း (Commission vs Position Taking)
+Agent များကို အကျိုးအမြတ်ပေးရာတွင် အဓိက နည်းလမ်း (၂) မျိုး ရှိပါသည်။ မိမိလုပ်ငန်းနှင့် ကိုက်ညီမည့် နည်းလမ်းကို ရွေးချယ်ရပါမည်။
+
+နည်းလမ်း (၁) - Turnover Commission (ထိုးကြေးအပေါ် ကော်မရှင်ပေးခြင်း)
+User ထိုးလိုက်သော စုစုပေါင်း ထိုးကြေးပမာဏ (Turnover) အပေါ်မူတည်၍ Agent ကို ရာခိုင်နှုန်း (ဥပမာ - ၅%) ပေးသောစနစ်။
+အားသာချက်: Agent သည် အရှုံး/အမြတ် (Risk) ကို တာဝန်ယူစရာမလိုပါ။ User ထိုးသလောက် ကော်မရှင်ရမည်။
+Admin ဘက်မှ: အရှုံး/အမြတ် အားလုံးသည် Admin ၏ တာဝန်သာ ဖြစ်ပါသည်။
+နည်းလမ်း (၂) - Position Taking / Share (ဒိုင်ရှယ်ယာ ယူခြင်း)
+Agent သည် ဒိုင်အဖြစ် ရာခိုင်နှုန်း တစ်ခု (ဥပမာ - ၂၀%) ပါဝင်ပတ်သက်သောစနစ်။
+User က ၁ သောင်းဖိုးထိုး၍ ရှုံးသွားပါက Agent က ၂ ထောင်ကျပ် (၂၀%) ရမည်ဖြစ်ပြီး၊ User က ပေါက်သွားပါကလည်း Agent ဘက်မှ ၂၀% စိုက်လျော်ရမည့် စနစ်ဖြစ်သည်။
+အားသာချက်: Agent များကိုယ်တိုင် ဒိုင်လုပ်ချင်စိတ်ကို ဆွဲဆောင်နိုင်ပြီး Admin ဘက်မှလည်း Risk (အရှုံး/အမြတ်) ကို ခွဲဝေလျှော့ချနိုင်ပါသည်။
+၄။ Agent များအတွက် လိုအပ်မည့် လုပ်ဆောင်ချက်များ (Agent Dashboard)
+Agent များသည် Admin Panel အကြီးကြီးသို့ ဝင်ခွင့်မရှိဘဲ၊ သူတို့အတွက် သီးသန့် Agent Dashboard (agent_dashboard.php) တစ်ခု တည်ဆောက်ပေးရပါမည်။ ထိုအထဲတွင်-
+
+User Management: မိမိအောက်တွင် User အကောင့်အသစ်များ ဖွင့်ပေးခြင်း။
+Banking / Transfer: မိမိ User များ၏ အကောင့်ထဲသို့ ငွေထည့်ပေးခြင်း (Deposit) / ငွေထုတ်ယူခြင်း (Withdrawal) ပြုလုပ်ပေးခြင်း။
+Downline Reports: မိမိ User များ၏ နေ့စဉ် ထိုးကြေး၊ ပေါက်ကြေး၊ အရှုံး/အမြတ် မှတ်တမ်းများကို ကြည့်ရှုနိုင်ခြင်း။
+Commission / Share Report: မိမိရရှိမည့် ကော်မရှင် သို့မဟုတ် ဒိုင်ရှယ်ယာ အရှုံး/အမြတ် ရှင်းတမ်းများကို ကြည့်ရှုနိုင်ခြင်း။
+လက်တွေ့ အကောင်အထည်ဖော်ရန် အကြံပြုချက်
+အကယ်၍ ဤစနစ်ကို စတင်ရေးသားမည်ဆိုပါက-
+
+Database ပိုင်း: users table တွင် role = 'agent' အသစ်တစ်ခု ထပ်တိုးမည်။ Agent ၏ ရှယ်ယာ ရာခိုင်နှုန်းကို မှတ်သားရန် agent_share_percent (သို့) agent_commission_percent Column များ ထပ်တိုးပါမည်။
+Agent Panel ဖန်တီးခြင်း: agent_dashboard.php, agent_users.php, agent_transfer.php စသည့် ဖိုင်အသစ်များ ဖန်တီးရပါမည်။
+Result Calculation ပြင်ဆင်ခြင်း: admin_declare_result.php တွင် အဖြေထွက်ပါက Admin နှင့် Agent ကြား အရှုံး/အမြတ်ကို ခွဲဝေတွက်ချက်မည့် (Settlement) Logic ကို ထည့်သွင်းရေးသားရပါမည်။
+မေးခွန်း - အထက်ပါ ဆွေးနွေးချက်များထဲမှ အကျိုးအမြတ်ခွဲဝေမှုကို Commission စနစ် သက်သက်သာ သွားချင်ပါသလား? သို့မဟုတ် Agent တွေပါ ဒိုင်အဖြစ် ပါဝင်နိုင်မယ့် Share / Position ယူတဲ့စနစ် ကိုပါ ထည့်သွင်းရေးသားချင်ပါသလား ခင်ဗျာ?
+
+(ရွေးချယ်မှုအပေါ် မူတည်၍ Database နှင့် Agent Dashboard ပိုင်းကို စတင် ရေးသားပေးပါမည်။)
+
+ကော်မရှင်ရော၊ ဒိုင်ရှယ်ယာ (Share) ပါ နှစ်မျိုးလုံး ခွဲသတ်မှတ်လို့ရမယ့်စနစ် ရေးချင်ပါတယ်။ စတင်ရေးသားပေးပါ။
+
+လောလောဆယ်တော့ Turnover Commission စနစ်နဲ့ပဲ အရင်သွားချင်ပါတယ်။ Agent တွေ သူတို့ User ကို ငွေသွင်း/ထုတ်ပေးလို့ရမယ့် Agent Panel အရင်ရေးပေးပါ။
+
+Agent တွေက ၎င်းတို့အောက်ရှိ User များကို ကိုယ်တိုင်စီမံနိုင်မည့် `agent_users.php` ဖိုင်ကို ဆက်လက်ရေးသားပေးပါ။
+
+Agent တွေက User များထံသို့ ငွေသွင်း/ထုတ်ပေးနိုင်မည့် `agent_transfer.php` ကို ဆက်လက်ရေးသားပေးပါ။
+Admin က Agent တွေကို စီမံနိုင်ဖို့ `admin_users.php` မှာ Role ကို Agent အဖြစ် ပြောင်းပေးလို့ရမယ့် Option ထည့်ပေးပါ။
+Agent က မိမိအောက်ရှိ User အသစ်တွေ ဖွင့်ပေးနိုင်ဖို့ `agent_users.php` ကို ဆက်လက်ရေးသားပေးပါ။

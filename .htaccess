@@ -1,0 +1,11 @@
+RewriteEngine On
+
+# ၁။ အကယ်၍ User က .php ဖြင့် (ဥပမာ about.php) တိုက်ရိုက်ဝင်လာခဲ့လျှင် .php မပါသော URL သို့ အလိုအလျောက် ပြောင်းပေးရန် (301 Redirect - SEO အတွက် ကောင်းမွန်ပါသည်)
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s([^.]+)\.php [NC]
+RewriteRule ^ %1 [R=301,L]
+
+# ၂။ .php မပါဘဲ လာခေါ်ပါက (ဥပမာ about) နောက်ကွယ်မှ .php ဖိုင် (about.php) ကို အလုပ်လုပ်စေရန် (Internal Rewrite)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
